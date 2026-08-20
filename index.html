@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tejaswini Pote | Digital Marketing Portfolio</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500;1,9..144,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FAF7F5;
+  --bg-card:#FFFFFF;
+  --plum:#1C1220;
+  --plum-2:#2A1B29;
+  --pink:#B23A63;
+  --pink-2:#D9678F;
+  --pink-deep:#7A1F42;
+  --pink-soft:#EDD3DC;
+  --pink-pale:#F7ECEF;
+  --gold:#B08D3F;
+  --text-dark:#1C1220;
+  --text-soft:#786670;
+  --off-white:#FFFDFB;
+  --display:'Fraunces',serif;
+  --body:'Manrope',sans-serif;
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--body);background:var(--bg);color:var(--text-dark);line-height:1.65;overflow-x:hidden;}
+img{display:block;max-width:100%;}
+a{color:inherit;}
+::selection{background:var(--pink);color:#fff;}
+
+@media (prefers-reduced-motion: reduce){
+  *{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;scroll-behavior:auto !important;}
+}
+
+.story-bar{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;gap:5px;padding:10px 5%;background:linear-gradient(180deg,rgba(250,247,245,.95),rgba(250,247,245,0));pointer-events:none;}
+.story-seg{flex:1;height:3px;border-radius:3px;background:rgba(28,18,32,.13);overflow:hidden;position:relative;}
+.story-seg i{position:absolute;left:0;top:0;bottom:0;width:0%;background:linear-gradient(90deg,var(--pink),var(--pink-2));border-radius:3px;transition:width .25s linear;}
+
+header{position:sticky;top:0;z-index:150;background:rgba(250,247,245,.85);backdrop-filter:blur(12px);border-bottom:1px solid rgba(28,18,32,.07);padding:1.1rem 6% .9rem;}
+nav{max-width:1320px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;}
+.logo{font-family:var(--display);font-style:italic;font-weight:600;font-size:1.55rem;color:var(--text-dark);}
+.logo span{color:var(--pink);}
+.nav-links{display:flex;gap:2.3rem;align-items:center;}
+.nav-links a{text-decoration:none;color:var(--text-dark);font-weight:600;font-size:.78rem;letter-spacing:1.4px;text-transform:uppercase;transition:.3s;position:relative;}
+.nav-links a:not(.btn-pink)::after{content:'';position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--pink);transition:.3s;}
+.nav-links a:not(.btn-pink):hover::after{width:100%;}
+.nav-links a:hover{color:var(--pink-deep);}
+.btn-pink{background:linear-gradient(135deg,var(--pink),var(--pink-deep));color:#fff!important;padding:.7rem 1.6rem;border-radius:100px;font-weight:700;letter-spacing:1px;text-transform:uppercase;font-size:.74rem;transition:.3s;box-shadow:0 8px 20px -8px rgba(178,58,99,.45);}
+.btn-pink:hover{transform:translateY(-2px);box-shadow:0 12px 26px -8px rgba(178,58,99,.55);}
+.menu-toggle{display:none;font-size:1.4rem;color:var(--text-dark);cursor:pointer;background:none;border:none;}
+
+section{position:relative;padding:7rem 6%;max-width:1320px;margin:0 auto;}
+.eyebrow{display:inline-flex;align-items:center;gap:.5rem;font-size:.72rem;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;color:var(--pink-deep);margin-bottom:1.1rem;}
+.eyebrow::before{content:'';width:26px;height:2px;background:var(--pink);display:inline-block;}
+h2.title{font-family:var(--display);font-weight:700;font-size:clamp(2rem,4vw,3.1rem);letter-spacing:-.5px;color:var(--text-dark);margin-bottom:1.5rem;}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .9s var(--ease),transform .9s var(--ease);}
+.reveal.in-view{opacity:1;transform:translateY(0);}
+.reveal-delay-1.in-view{transition-delay:.12s;}
+.reveal-delay-2.in-view{transition-delay:.24s;}
+.reveal-delay-3.in-view{transition-delay:.36s;}
+
+.hero{min-height:94vh;display:flex;align-items:center;padding-top:8rem;overflow:hidden;position:relative;}
+.hero::before{content:'';position:absolute;top:-12%;right:-8%;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,var(--pink-soft) 0%,transparent 72%);z-index:0;animation:float1 16s ease-in-out infinite;}
+.hero::after{content:'';position:absolute;bottom:-15%;left:-8%;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(176,141,63,.16) 0%,transparent 72%);z-index:0;animation:float2 19s ease-in-out infinite;}
+@keyframes float1{0%,100%{transform:translate(0,0) scale(1);}50%{transform:translate(-16px,16px) scale(1.04);}}
+@keyframes float2{0%,100%{transform:translate(0,0) scale(1);}50%{transform:translate(14px,-14px) scale(1.03);}}
+.hero-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:4rem;align-items:center;position:relative;z-index:2;width:100%;}
+.hero-photo-wrap{position:relative;}
+.hero-photo{position:relative;border-radius:20px;overflow:hidden;box-shadow:0 40px 70px -32px rgba(28,18,32,.4);border:6px solid #fff;transform:rotate(-1.1deg);animation:heroIn 1.1s var(--ease) both;}
+.hero-photo img{width:100%;height:560px;object-fit:cover;}
+@keyframes heroIn{from{opacity:0;transform:rotate(-1.1deg) translateY(28px) scale(.97);}to{opacity:1;transform:rotate(-1.1deg) translateY(0) scale(1);}}
+.hero-tag{position:absolute;background:#fff;border-radius:14px;padding:.85rem 1.15rem;box-shadow:0 20px 40px -18px rgba(28,18,32,.28);display:flex;align-items:center;gap:.65rem;font-weight:700;font-size:.82rem;opacity:0;animation:heroTagIn .7s var(--ease) forwards,bob 6s ease-in-out 1.6s infinite;}
+.hero-tag i{color:var(--pink);font-size:1.05rem;}
+.hero-tag.tag1{top:8%;right:-6%;animation-delay:.9s,2s;}
+.hero-tag.tag2{bottom:10%;left:-8%;animation-delay:1.1s,2.2s;}
+@keyframes bob{0%,100%{transform:translateY(0);}50%{transform:translateY(-7px);}}
+@keyframes heroTagIn{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
+.hero-copy .eyebrow{opacity:0;animation:fadeUp .7s .1s forwards;}
+.hero-copy h1{font-family:var(--display);font-weight:700;font-size:clamp(2.6rem,5vw,4.3rem);line-height:1.06;letter-spacing:-1px;margin-bottom:1.4rem;opacity:0;animation:fadeUp .8s .25s forwards;}
+.hero-copy h1 em{font-style:italic;color:var(--pink);position:relative;}
+.hero-copy .role{font-weight:800;font-size:1.05rem;margin-bottom:.6rem;opacity:0;animation:fadeUp .8s .4s forwards;}
+.hero-copy .role span{color:var(--pink-deep);}
+.hero-copy p.sub{color:var(--text-soft);font-size:1.08rem;max-width:480px;margin-bottom:2.2rem;opacity:0;animation:fadeUp .8s .55s forwards;}
+.hero-copy .cta-row{display:flex;gap:1rem;flex-wrap:wrap;opacity:0;animation:fadeUp .8s .7s forwards;}
+.btn-outline{border:2px solid var(--text-dark);color:var(--text-dark);padding:.8rem 1.7rem;border-radius:100px;font-weight:700;text-decoration:none;font-size:.85rem;letter-spacing:.5px;transition:.3s;}
+.btn-outline:hover{background:var(--text-dark);color:#fff;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
+.scroll-cue{position:absolute;bottom:2.2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.5rem;font-size:.68rem;letter-spacing:2px;text-transform:uppercase;color:var(--text-soft);z-index:2;}
+.scroll-cue .line{width:1px;height:36px;background:linear-gradient(var(--pink),transparent);animation:scrollLine 1.8s ease-in-out infinite;}
+@keyframes scrollLine{0%{transform:scaleY(0);transform-origin:top;}50%{transform:scaleY(1);transform-origin:top;}51%{transform-origin:bottom;}100%{transform:scaleY(0);transform-origin:bottom;}}
+
+.who{background:var(--plum);color:#FFF3F7;border-radius:28px;margin:2rem 6%;padding:6rem 5%;position:relative;overflow:hidden;}
+.who::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.05) 1.5px,transparent 1.5px);background-size:26px 26px;-webkit-mask-image:radial-gradient(ellipse at 75% 20%,#000 0%,transparent 65%);mask-image:radial-gradient(ellipse at 75% 20%,#000 0%,transparent 65%);}
+.who-grid{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center;position:relative;z-index:1;}
+.who .eyebrow{color:var(--pink-2);}
+.who .eyebrow::before{background:var(--pink-2);}
+.who h2{font-family:var(--display);font-weight:600;font-style:italic;font-size:clamp(1.7rem,3vw,2.5rem);margin-bottom:1.3rem;line-height:1.3;}
+.who p{color:rgba(255,243,247,.75);font-size:1.02rem;margin-bottom:1.1rem;}
+.tag-cloud{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.6rem;}
+.tag-chip{background:rgba(255,255,255,.08);border:1px solid rgba(255,111,163,.4);color:#FFDDEA;padding:.5rem 1rem;border-radius:100px;font-size:.78rem;font-weight:600;transition:.3s;}
+.tag-chip:hover{background:var(--pink);color:#fff;transform:translateY(-2px);}
+.who-visual{display:grid;gap:1rem;}
+.who-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:1.4rem 1.5rem;transition:.4s var(--ease);}
+.who-card:hover{background:rgba(217,103,143,.1);border-color:rgba(217,103,143,.35);transform:translateX(5px);}
+.who-card i{color:var(--pink-2);font-size:1.3rem;margin-bottom:.6rem;display:block;}
+.who-card h4{font-family:var(--display);font-weight:600;margin-bottom:.3rem;font-size:1.05rem;}
+.who-card p{font-size:.85rem;color:rgba(255,243,247,.6);margin:0;}
+
+.stats-wrap{text-align:center;}
+.stats-wrap h2.title{max-width:780px;margin-left:auto;margin-right:auto;}
+.stats-wrap>p{max-width:680px;margin:0 auto 1.4rem;color:var(--text-soft);font-size:1.08rem;}
+.industry-row{display:flex;flex-wrap:wrap;justify-content:center;gap:.7rem;margin:2rem 0 3.5rem;}
+.industry-chip{background:var(--pink-pale);color:var(--pink-deep);border:1px solid var(--pink-soft);padding:.55rem 1.15rem;border-radius:100px;font-weight:700;font-size:.82rem;}
+.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.6rem;}
+.stat-card{background:var(--bg-card);border-radius:16px;padding:2.2rem 1.5rem;box-shadow:0 16px 32px -26px rgba(28,18,32,.2);border:1px solid rgba(178,58,99,.1);transition:.4s var(--ease);}
+.stat-card:hover{transform:translateY(-6px);box-shadow:0 24px 42px -22px rgba(178,58,99,.22);border-color:rgba(178,58,99,.22);}
+.stat-num{font-family:var(--display);font-weight:800;font-size:2.6rem;color:var(--pink);line-height:1;}
+.stat-label{margin-top:.6rem;font-weight:700;font-size:.85rem;color:var(--text-soft);text-transform:uppercase;letter-spacing:.6px;}
+
+.exp-timeline{position:relative;margin-top:3rem;padding-left:2.4rem;}
+.exp-timeline::before{content:'';position:absolute;left:8px;top:8px;bottom:8px;width:2px;background:linear-gradient(var(--pink-soft),var(--pink),var(--pink-soft));}
+.exp-item{position:relative;margin-bottom:3.2rem;}
+.exp-item:last-child{margin-bottom:0;}
+.exp-dot{position:absolute;left:-2.4rem;top:6px;width:16px;height:16px;border-radius:50%;background:var(--pink);border:4px solid var(--pink-soft);box-shadow:0 0 0 4px var(--bg);}
+.exp-item.current .exp-dot{background:var(--gold);animation:pulse 2.6s infinite;}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(176,141,63,.45),0 0 0 4px var(--bg);}70%{box-shadow:0 0 0 10px rgba(176,141,63,0),0 0 0 4px var(--bg);}100%{box-shadow:0 0 0 0 rgba(176,141,63,0),0 0 0 4px var(--bg);}}
+.exp-card{background:var(--bg-card);border-radius:16px;padding:2rem 2.2rem;box-shadow:0 16px 34px -28px rgba(28,18,32,.28);border:1px solid rgba(28,18,32,.05);}
+.exp-head{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem;align-items:baseline;margin-bottom:1rem;}
+.exp-head h3{font-family:var(--display);font-size:1.35rem;font-weight:700;}
+.exp-head .badge{background:var(--pink-pale);color:var(--pink-deep);font-size:.72rem;font-weight:800;padding:.35rem .8rem;border-radius:100px;letter-spacing:.5px;}
+.exp-item.current .exp-head .badge{background:#F1E9D3;color:#6B542A;}
+.exp-role{color:var(--pink-deep);font-weight:700;font-size:.9rem;margin-bottom:1rem;}
+.exp-list{list-style:none;display:grid;gap:.7rem;margin-bottom:1.2rem;}
+.exp-list li{position:relative;padding-left:1.5rem;color:var(--text-soft);font-size:.95rem;}
+.exp-list li::before{content:'\f005';font-family:'Font Awesome 6 Free';font-weight:900;position:absolute;left:0;top:.15rem;color:var(--pink);font-size:.7rem;}
+.platform-row{display:flex;flex-wrap:wrap;gap:.5rem;}
+.platform-row span{background:var(--plum);color:#FFEAF2;font-size:.72rem;font-weight:700;padding:.4rem .8rem;border-radius:8px;}
+
+.day-life{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;}
+.flow-row{display:flex;flex-wrap:wrap;gap:1rem;margin-top:2rem;}
+.flow-step{flex:1;min-width:150px;background:var(--pink-pale);border-radius:14px;padding:1.4rem 1.2rem;text-align:center;transition:.4s var(--ease);}
+.flow-step:hover{background:var(--pink);color:#fff;transform:translateY(-4px);}
+.flow-step i{font-size:1.5rem;color:var(--pink);margin-bottom:.6rem;display:block;}
+.flow-step:hover i{color:#fff;}
+.flow-step span{font-weight:700;font-size:.82rem;display:block;}
+.day-copy p{color:var(--text-soft);font-size:1.02rem;margin-bottom:1.1rem;}
+.day-copy .pull{font-family:var(--display);font-style:italic;font-weight:600;font-size:1.3rem;color:var(--pink-deep);border-left:3px solid var(--pink);padding-left:1.2rem;margin-top:1.6rem;}
+
+.playground{background:linear-gradient(135deg,var(--pink-pale),#fff);border-radius:28px;margin:2rem 6%;padding:6rem 5%;display:grid;grid-template-columns:.8fr 1.2fr;gap:4rem;align-items:center;position:relative;overflow:hidden;}
+.phone-frame{background:var(--plum);border-radius:34px;padding:14px;width:270px;margin:0 auto;box-shadow:0 40px 70px -34px rgba(28,18,32,.45);transform:rotate(-2deg);transition:.5s var(--ease);}
+.phone-frame:hover{transform:rotate(0deg) scale(1.015);}
+.phone-frame .notch{width:70px;height:8px;background:#000;border-radius:10px;margin:0 auto 10px;}
+.phone-frame img{border-radius:24px;width:100%;}
+.playground-copy p{color:var(--text-soft);font-size:1.02rem;margin-bottom:1.1rem;}
+.mini-stats{display:flex;gap:2rem;margin-top:1.8rem;flex-wrap:wrap;}
+.mini-stats div{text-align:left;}
+.mini-stats .n{font-family:var(--display);font-weight:800;font-size:1.8rem;color:var(--pink-deep);}
+.mini-stats .l{font-size:.75rem;text-transform:uppercase;letter-spacing:1px;color:var(--text-soft);font-weight:700;}
+
+.projects-head{text-align:center;margin-bottom:2rem;}
+.marquee-wrap{overflow:hidden;position:relative;padding:2.5rem 0;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);}
+.marquee-track{display:flex;gap:1.2rem;width:max-content;animation:scrollLeft 42s linear infinite;}
+.marquee-track:hover{animation-play-state:paused;}
+@keyframes scrollLeft{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+.client-pill{background:var(--bg-card);border:1px solid rgba(178,58,99,.14);box-shadow:0 12px 26px -22px rgba(28,18,32,.25);padding:1.1rem 2rem;border-radius:100px;font-weight:700;font-size:1rem;white-space:nowrap;color:var(--text-dark);display:flex;align-items:center;gap:.6rem;transition:.3s;text-decoration:none;cursor:default;}
+a.client-pill{cursor:pointer;}
+.client-pill:hover{border-color:rgba(178,58,99,.35);box-shadow:0 16px 30px -20px rgba(178,58,99,.3);}
+.client-pill i{color:var(--pink);font-size:.8rem;}
+.projects-foot{text-align:center;margin-top:2rem;}
+.projects-foot .n{font-family:var(--display);font-weight:800;color:var(--pink-deep);font-size:1.3rem;}
+
+.ads-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;}
+.ads-shot{border-radius:18px;overflow:hidden;box-shadow:0 26px 54px -30px rgba(28,18,32,.32);border:8px solid #fff;transform:rotate(.7deg);transition:.5s var(--ease);}
+.ads-shot:hover{transform:rotate(0) scale(1.015);}
+.ads-copy p{color:var(--text-soft);font-size:1.02rem;margin-bottom:1.1rem;}
+.chip-row{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.5rem;}
+.chip-row span{background:var(--plum);color:#FFEAF2;padding:.5rem 1rem;border-radius:100px;font-size:.78rem;font-weight:700;}
+
+.philosophy{background:var(--plum);border-radius:28px;margin:2rem 6%;padding:6rem 5%;color:#fff;position:relative;overflow:hidden;}
+.philosophy-grid{display:grid;grid-template-columns:.6fr 1.4fr;gap:3.5rem;align-items:center;}
+.philo-photo{width:220px;height:220px;border-radius:50%;overflow:hidden;border:5px solid var(--pink-2);margin:0 auto;box-shadow:0 26px 54px -22px rgba(217,103,143,.4);}
+.philo-photo img{width:100%;height:100%;object-fit:cover;}
+.quote-mark{font-family:var(--display);font-size:5rem;color:var(--pink-2);line-height:0;opacity:.7;}
+.philosophy blockquote{font-family:var(--display);font-style:italic;font-weight:600;font-size:clamp(1.5rem,3vw,2.2rem);line-height:1.4;margin:1rem 0 1.6rem;}
+.philosophy p.desc{color:rgba(255,243,247,.7);font-size:1.05rem;max-width:520px;}
+
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.3rem;margin-top:2.5rem;}
+.gallery-item{position:relative;border-radius:14px;overflow:hidden;box-shadow:0 18px 36px -26px rgba(28,18,32,.32);cursor:pointer;aspect-ratio:3/4;}
+.gallery-item img{width:100%;height:100%;object-fit:cover;transition:.7s var(--ease);}
+.gallery-item:hover img{transform:scale(1.06);}
+.gallery-item .cap{position:absolute;inset:auto 0 0 0;padding:1.1rem 1rem .9rem;background:linear-gradient(0deg,rgba(28,18,32,.92),transparent);color:#fff;font-weight:700;font-size:.82rem;opacity:.95;transition:.4s;}
+.gallery-item.wide{grid-column:span 2;}
+.gallery-item.tall{grid-row:span 2;}
+.video-carousel-row{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;margin-top:3rem;}
+.vc-card{background:var(--bg-card);border-radius:18px;padding:1.6rem 1.8rem;box-shadow:0 18px 36px -26px rgba(28,18,32,.24);}
+.vc-card h4{font-family:var(--display);font-weight:700;margin-bottom:.9rem;color:var(--pink-deep);font-size:1.05rem;}
+.vc-links{display:flex;flex-direction:column;gap:.6rem;}
+.vc-links a{color:var(--text-dark);text-decoration:none;font-weight:600;font-size:.9rem;display:flex;align-items:center;gap:.6rem;transition:.25s;}
+.vc-links a i{color:var(--pink);}
+.vc-links a:hover{color:var(--pink-deep);transform:translateX(4px);}
+
+.contact-section{padding-top:6rem;}
+.contact-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:3.5rem;align-items:center;background:linear-gradient(135deg,#fff,var(--pink-pale));border-radius:28px;padding:5rem 5%;position:relative;overflow:hidden;}
+.contact-grid::after{content:'';position:absolute;bottom:-20%;right:-10%;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,var(--pink-soft),transparent 70%);}
+.contact-photo{border-radius:18px;overflow:hidden;border:6px solid #fff;box-shadow:0 26px 54px -28px rgba(28,18,32,.35);transform:rotate(-1deg);position:relative;z-index:1;transition:.4s var(--ease);}
+.contact-photo:hover{transform:rotate(0deg);}
+.contact-copy{position:relative;z-index:1;}
+.contact-copy h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.4vw,2.7rem);margin-bottom:1rem;}
+.contact-copy .quote{font-family:var(--display);font-style:italic;color:var(--pink-deep);font-size:1.25rem;margin-bottom:2rem;}
+.contact-methods{display:flex;flex-direction:column;gap:1rem;margin-bottom:2rem;}
+.contact-methods a{display:flex;align-items:center;gap:1rem;text-decoration:none;color:var(--text-dark);font-weight:700;font-size:1.02rem;}
+.contact-methods a .ic{width:44px;height:44px;border-radius:50%;background:var(--pink);color:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:.3s var(--ease);}
+.contact-methods a:hover .ic{background:var(--pink-deep);transform:scale(1.08);}
+.contact-links{display:flex;gap:1rem;flex-wrap:wrap;}
+footer{background:var(--plum);color:rgba(255,243,247,.7);padding:3rem 6% 2rem;margin-top:3rem;}
+.footer-in{max-width:1320px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+.footer-in .logo{color:#fff;}
+.social-row{display:flex;gap:.9rem;}
+.social-row a{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;transition:.3s;}
+.social-row a:hover{background:var(--pink);}
+.footer-bottom{text-align:center;font-size:.8rem;margin-top:2rem;color:rgba(255,243,247,.4);}
+
+.creativity{background:var(--plum);border-radius:28px;margin:2rem 6%;padding:6rem 5%;position:relative;overflow:hidden;color:#FFF3F7;}
+.creativity::before{content:'';position:absolute;top:-20%;left:-10%;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(217,103,143,.14) 0%,transparent 72%);z-index:0;animation:float1 18s ease-in-out infinite;}
+.creativity::after{content:'';position:absolute;bottom:-18%;right:-8%;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(176,141,63,.13) 0%,transparent 72%);z-index:0;animation:float2 21s ease-in-out infinite;}
+.creativity-head{position:relative;z-index:1;max-width:760px;}
+.creativity .eyebrow{color:var(--pink-2);}
+.creativity .eyebrow::before{background:var(--pink-2);}
+.creativity-head h2{font-family:var(--display);font-weight:700;font-size:clamp(2rem,4vw,3.1rem);letter-spacing:-.5px;margin-bottom:1.1rem;line-height:1.15;}
+.creativity-head p{color:rgba(255,243,247,.72);font-size:1.05rem;max-width:640px;}
+.creativity-sub{font-family:var(--display);font-style:italic;font-weight:600;color:var(--pink-2);font-size:.95rem;letter-spacing:.5px;margin:2.6rem 0 1.2rem;position:relative;z-index:1;display:flex;align-items:center;gap:.7rem;}
+.creativity-sub::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,rgba(217,103,143,.5),transparent);}
+.poster-grid{position:relative;z-index:1;display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem;}
+.poster-card{position:relative;border-radius:16px;overflow:hidden;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);box-shadow:0 24px 48px -26px rgba(0,0,0,.55);transition:.5s var(--ease);aspect-ratio:4/5;}
+.poster-card:hover{transform:translateY(-8px) rotate(-.6deg);border-color:rgba(217,103,143,.4);box-shadow:0 32px 60px -22px rgba(178,58,99,.35);}
+.poster-card img{width:100%;height:100%;object-fit:cover;transition:.7s var(--ease);}
+.poster-card:hover img{transform:scale(1.05);}
+.poster-card .pc-cap{position:absolute;inset:auto 0 0 0;padding:1.2rem 1.1rem 1rem;background:linear-gradient(0deg,rgba(10,6,10,.94),rgba(10,6,10,.15) 70%,transparent);}
+.poster-card .pc-cap .pc-client{font-size:.68rem;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--pink-2);margin-bottom:.3rem;}
+.poster-card .pc-cap .pc-title{font-family:var(--display);font-weight:600;font-style:italic;font-size:1.05rem;color:#fff;line-height:1.3;}
+.reel-row{position:relative;z-index:1;display:grid;grid-template-columns:repeat(2,1fr);gap:2.4rem;max-width:640px;margin:0 auto;}
+.reel-card{text-align:center;}
+.reel-frame{background:#000;border-radius:30px;padding:12px;box-shadow:0 36px 64px -30px rgba(0,0,0,.6);border:1px solid rgba(255,255,255,.08);transition:.5s var(--ease);position:relative;}
+.reel-frame:hover{transform:translateY(-6px);box-shadow:0 44px 74px -26px rgba(178,58,99,.35);}
+.reel-frame .notch{width:60px;height:7px;background:#000;border-radius:10px;margin:0 auto 8px;position:relative;z-index:2;}
+.reel-frame video{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:20px;display:block;background:#000;}
+.reel-caption{margin-top:1rem;font-weight:700;font-size:.85rem;color:rgba(255,243,247,.75);letter-spacing:.3px;}
+.reel-caption span{display:block;font-family:var(--display);font-style:italic;font-weight:600;color:#fff;font-size:1rem;margin-top:.2rem;}
+
+@media(max-width:980px){
+  .hero-grid,.who-grid,.day-life,.playground,.ads-grid,.philosophy-grid,.contact-grid{grid-template-columns:1fr;}
+  .hero-photo img{height:420px;}
+  .stat-grid{grid-template-columns:repeat(2,1fr);}
+  .gallery-grid{grid-template-columns:repeat(2,1fr);}
+  .gallery-item.wide{grid-column:span 2;}
+  .video-carousel-row{grid-template-columns:1fr;}
+  .nav-links{position:fixed;top:0;right:-100%;width:78%;max-width:340px;height:100vh;background:var(--off-white);flex-direction:column;justify-content:center;gap:2.2rem;transition:.4s;box-shadow:-20px 0 60px rgba(28,18,32,.14);}
+  .nav-links.open{right:0;}
+  .menu-toggle{display:block;}
+  .who,.playground,.philosophy,.contact-grid{padding:3.5rem 6%;border-radius:24px;}
+  section{padding:4.5rem 6%;}
+  .philo-photo{width:160px;height:160px;}
+  .creativity{padding:3.5rem 6%;border-radius:24px;}
+  .poster-grid{grid-template-columns:repeat(2,1fr);}
+  .reel-row{grid-template-columns:1fr;max-width:280px;}
+}
+@media(max-width:640px){
+  .stat-grid{grid-template-columns:1fr 1fr;}
+  .gallery-grid{grid-template-columns:1fr 1fr;}
+  .hero-tag{display:none;}
+  .poster-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<div class="story-bar" id="storyBar"></div>
+
+<header>
+  <nav>
+    <div class="logo">Tejaswini<span>.</span></div>
+    <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+    <div class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#work">Work</a>
+      <a href="#samples">Samples</a>
+      <a href="#creativity">Creativity</a>
+      <a href="#contact" class="btn-pink">Let's Connect</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero" id="hero">
+  <div class="hero-grid">
+    <div class="hero-photo-wrap">
+      <div class="hero-photo"><img src="images/hero.jpg" alt="Tejaswini Pote"></div>
+      <div class="hero-tag tag1"><i class="fas fa-chart-line"></i> 20+ Brands Managed</div>
+      <div class="hero-tag tag2"><i class="fas fa-heart"></i> Client Success First</div>
+    </div>
+    <div class="hero-copy">
+      <div class="eyebrow">Digital Marketing Executive</div>
+      <h1>Turning Ideas Into <em>Impactful</em> Visual Stories</h1>
+      <div class="role">Tejaswini Pote <span>| Content, Strategy &amp; Client Success</span></div>
+      <p class="sub">Specializing in Social Media Marketing, Content Writing, Paid Ads &amp; Client Success — helping brands turn everyday moments into scroll-stopping stories.</p>
+      <div class="cta-row">
+        <a href="#work" class="btn-pink">See My Work</a>
+        <a href="#contact" class="btn-outline">Get In Touch</a>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-cue"><span>Scroll</span><div class="line"></div></div>
+</section>
+
+<section id="about">
+  <div class="who reveal">
+    <div class="who-grid">
+      <div>
+        <div class="eyebrow">Scene 01 — Who I Am</div>
+        <h2>Not just a digital marketer — I'm someone who sees stories behind every brand.</h2>
+        <p>From understanding what makes a reel go viral to creating strategies that build engagement, I transformed my passion for creativity and social media into a full-time career in digital marketing.</p>
+        <div class="tag-cloud">
+          <div class="tag-chip">Social Media Strategy</div>
+          <div class="tag-chip">Content Writing</div>
+          <div class="tag-chip">Meta Ads</div>
+          <div class="tag-chip">Brand Storytelling</div>
+          <div class="tag-chip">Client Success</div>
+        </div>
+      </div>
+      <div class="who-visual">
+        <div class="who-card"><i class="fas fa-lightbulb"></i><h4>Reel &amp; Trend Radar</h4><p>Spotting what makes content stop the scroll before it happens.</p></div>
+        <div class="who-card"><i class="fas fa-pen-nib"></i><h4>Strategy-first Content</h4><p>Every post ties back to a growth or engagement goal.</p></div>
+        <div class="who-card"><i class="fas fa-people-arrows"></i><h4>Built On Client Trust</h4><p>Long-term partnerships across hospitality, real estate &amp; more.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="stats-wrap reveal">
+    <div class="eyebrow" style="justify-content:center;display:flex;">Scene 02 — My Work, One Line</div>
+    <h2 class="title">I help brands grow online through strategic content, creative storytelling &amp; impactful social media marketing.</h2>
+    <p>Working across multiple industries with one mission: building strong digital presence and driving real growth through smart content and strategy.</p>
+    <div class="industry-row">
+      <div class="industry-chip">Real Estate</div>
+      <div class="industry-chip">B2B Businesses</div>
+      <div class="industry-chip">Hospitals</div>
+      <div class="industry-chip">Banquets</div>
+      <div class="industry-chip">Resorts</div>
+      <div class="industry-chip">Restaurants &amp; Cafes</div>
+      <div class="industry-chip">+ More</div>
+    </div>
+    <div class="stat-grid">
+      <div class="stat-card reveal"><div class="stat-num" data-count="20">0</div><div class="stat-label">Brands Managed</div></div>
+      <div class="stat-card reveal reveal-delay-1"><div class="stat-num" data-count="20">0</div><div class="stat-label">Clients &amp; Counting</div></div>
+      <div class="stat-card reveal reveal-delay-2"><div class="stat-num" data-count="31">0</div><div class="stat-label">Ad Campaigns Run</div></div>
+      <div class="stat-card reveal reveal-delay-3"><div class="stat-num" data-count="6">0</div><div class="stat-label">Platforms Handled</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="reveal">
+    <div class="eyebrow">Scene 03 — Work Experience</div>
+    <h2 class="title">Where the strategy happened</h2>
+  </div>
+  <div class="exp-timeline">
+    <div class="exp-item current reveal">
+      <div class="exp-dot"></div>
+      <div class="exp-card">
+        <div class="exp-head"><h3>OMX Technologies</h3><span class="badge">Full-Time · Present</span></div>
+        <div class="exp-role">Pune · Social Media Executive</div>
+        <ul class="exp-list">
+          <li>Lead end-to-end social media strategies for 20+ client accounts across Instagram, Facebook, LinkedIn, YouTube, X/Twitter, and Google Business Profile.</li>
+          <li>Develop content strategies, monthly calendars, creative concepts, and platform-specific campaigns tailored to each brand.</li>
+          <li>Plan and execute Meta Ads campaigns focused on engagement, lead generation, and business growth.</li>
+          <li>Use audience insights, performance analytics, and competitor research to continuously optimize content and campaigns.</li>
+          <li>Create and present pitch decks and digital marketing proposals that contribute to acquiring new clients and expanding the agency's portfolio.</li>
+          <li>Collaborate on photo and video shoots, ensuring visual content aligns with each brand's identity and storytelling.</li>
+          <li>Coordinate with clients and creative teams to ensure smooth execution, timely delivery, and consistent brand communication.</li>
+        </ul>
+        <div class="platform-row"><span>Instagram</span><span>LinkedIn</span><span>Facebook</span><span>Twitter</span><span>YouTube</span><span>GMB</span></div>
+      </div>
+    </div>
+    <div class="exp-item reveal">
+      <div class="exp-dot"></div>
+      <div class="exp-card">
+        <div class="exp-head"><h3>The Crazy Socials</h3><span class="badge">Nov 2024 – Sep 2025</span></div>
+        <div class="exp-role">Pune · Social Media Executive — Full-Time</div>
+        <ul class="exp-list">
+          <li>Managed 6–8 client accounts, handling their complete social media presence across Instagram, Facebook, LinkedIn, YouTube, X/Twitter, and Google Business Profile.</li>
+          <li>Created monthly content calendars and social media strategies based on brand goals, audience insights, and competitor analysis.</li>
+          <li>Planned and executed Meta Ads campaigns to improve engagement, generate leads, and support sales growth.</li>
+          <li>Implemented organic growth strategies to strengthen brand visibility and audience engagement.</li>
+          <li>Designed and presented pitch decks that helped convert prospects into new clients.</li>
+          <li>Participated in photoshoots and content production, contributing ideas that strengthened brand storytelling.</li>
+          <li>Managed client communication and collaborated with internal teams to ensure smooth campaign execution and delivery.</li>
+        </ul>
+        <div class="platform-row"><span>Instagram</span><span>LinkedIn</span><span>Facebook</span><span>Twitter</span><span>YouTube</span><span>GMB</span></div>
+      </div>
+    </div>
+    <div class="exp-item reveal">
+      <div class="exp-dot"></div>
+      <div class="exp-card">
+        <div class="exp-head"><h3>The Last Radio</h3><span class="badge">Jul 2024 – Oct 2024</span></div>
+        <div class="exp-role">Nagpur · Social Media Executive — Full-Time</div>
+        <ul class="exp-list">
+          <li>Managed 3–4 client accounts across Instagram, Facebook, LinkedIn, and other social media platforms.</li>
+          <li>Developed monthly content calendars, social media strategies, and campaign ideas based on client objectives.</li>
+          <li>Conducted market and competitor research to identify trends and improve content performance.</li>
+          <li>Increased brand visibility and audience engagement through organic social media strategies.</li>
+          <li>Coordinated with clients and internal teams to ensure smooth execution of campaigns and timely content delivery.</li>
+          <li>Proactively handled client requirements and resolved concerns to maintain strong client relationships.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="exp-item reveal">
+      <div class="exp-dot"></div>
+      <div class="exp-card">
+        <div class="exp-head"><h3>Imborn Digital</h3><span class="badge">Apr 2024 – Jul 2024</span></div>
+        <div class="exp-role">Nagpur · Social Media Intern — Part-Time</div>
+        <ul class="exp-list">
+          <li>Assisted in social media campaigns, content planning, and creative development for client accounts.</li>
+          <li>Created and supported engaging social media content aligned with brand objectives.</li>
+          <li>Analyzed social media performance metrics to identify opportunities for improving engagement.</li>
+          <li>Conducted competitor research and market analysis to support content strategies.</li>
+          <li>Gained hands-on experience in task management, client coordination, and social media execution.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="day-life">
+    <div class="day-copy reveal">
+      <div class="eyebrow">Scene 04 — A Day In My World</div>
+      <h2 class="title">Life of a Digital Marketer</h2>
+      <p>My day starts with ideas and ends with content that connects. From spotting trends and planning strategies to writing captions, creating reel ideas, and analyzing performance — every day is a mix of creativity and strategy.</p>
+      <div class="pull">"Digital marketing isn't just about posting content — it's about telling stories, building brands, and turning attention into engagement."</div>
+    </div>
+    <div class="reveal reveal-delay-1">
+      <div class="flow-row">
+        <div class="flow-step"><i class="fas fa-magnifying-glass-chart"></i><span>Spot Trends</span></div>
+        <div class="flow-step"><i class="fas fa-compass-drafting"></i><span>Plan Strategy</span></div>
+        <div class="flow-step"><i class="fas fa-feather-pointed"></i><span>Write Captions</span></div>
+      </div>
+      <div class="flow-row">
+        <div class="flow-step"><i class="fas fa-clapperboard"></i><span>Ideate Reels</span></div>
+        <div class="flow-step"><i class="fas fa-chart-simple"></i><span>Analyze Results</span></div>
+        <div class="flow-step"><i class="fas fa-arrows-rotate"></i><span>Refine &amp; Repeat</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="playground reveal">
+    <div class="phone-frame">
+      <div class="notch"></div>
+      <img src="images/instagram.jpg" alt="DoubleTree by Hilton Pune Instagram">
+    </div>
+    <div class="playground-copy">
+      <div class="eyebrow">Scene 05 — My Favorite Playground</div>
+      <h2 class="title">Social Media, My Favorite Playground</h2>
+      <p>Starting with small businesses helped me understand real audience behaviour and content strategy. That journey eventually led to the opportunity to work with a 5-star hospitality brand — DoubleTree by Hilton, Pune.</p>
+      <p>Managing content and engagement for a premium brand strengthened my approach to strategic social media marketing — applying organic content strategy, audience engagement techniques, and brand-focused storytelling at a premium level.</p>
+      <div class="mini-stats">
+        <div><div class="n">11.9K</div><div class="l">Followers Managed</div></div>
+        <div><div class="n">1,995</div><div class="l">Posts Curated</div></div>
+        <div><div class="n">5★</div><div class="l">Hospitality Brand</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="projects-head reveal">
+    <div class="eyebrow" style="justify-content:center;display:flex;">Scene 06 — Projects</div>
+    <h2 class="title">Brands I've Told Stories For</h2>
+  </div>
+  <div class="marquee-wrap reveal">
+    <div class="marquee-track" id="marqueeTrack"></div>
+  </div>
+  <div class="projects-foot reveal"><span class="n">20+</span> clients across hospitality, real estate, healthcare &amp; more — and counting.</div>
+</section>
+
+<section>
+  <div class="ads-grid">
+    <div class="ads-shot reveal"><img src="images/ads.jpg" alt="Meta Ads campaign performance dashboard"></div>
+    <div class="ads-copy reveal reveal-delay-1">
+      <div class="eyebrow">Scene 07 — Paid Ads Performance</div>
+      <h2 class="title">Numbers That Back the Story</h2>
+      <p>Managed and optimized paid advertising campaigns for real estate and tourism brands, focusing on audience targeting, creative testing, and conversion-driven strategy.</p>
+      <p>Through data-driven optimization, the campaigns delivered strong reach, high engagement, and quality leads while maintaining cost-efficient ad spend.</p>
+      <div class="chip-row"><span>Audience Targeting</span><span>Creative Testing</span><span>Budget Optimization</span><span>Lead Generation</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="philosophy reveal">
+    <div class="philosophy-grid">
+      <div class="philo-photo"><img src="images/style.jpg" alt="Tejaswini Pote"></div>
+      <div>
+        <div class="eyebrow">Scene 08 — The Tejaswini Style</div>
+        <span class="quote-mark">"</span>
+        <blockquote>Simple words. Clear message. Strong impact.</blockquote>
+        <p class="desc">I believe great marketing speaks human. No jargon, no fluff — just honest, helpful content that respects the reader's time and earns their attention.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="samples">
+  <div class="reveal">
+    <div class="eyebrow">Scene 09 — Creative Samples</div>
+    <h2 class="title">A Few Favorites From the Feed</h2>
+  </div>
+  <div class="gallery-grid">
+    <div class="gallery-item tall reveal"><img src="images/sample1.jpg" alt="Date with Whisky campaign creative"><div class="cap">Life of Dorrance — Date with Whisky</div></div>
+    <div class="gallery-item reveal reveal-delay-1"><img src="images/sample2.jpg" alt="Because love is in the details creative"><div class="cap">Because Love Is in the Details</div></div>
+    <div class="gallery-item reveal reveal-delay-2"><img src="images/sample3.jpg" alt="Cardiovision POV creative"><div class="cap">Cardiovision — POV Reel Hook</div></div>
+    <div class="gallery-item wide reveal"><img src="images/sample_cocktails.jpg" alt="Summer special cocktail creatives"><div class="cap">Soho by Panchshil — Summer Cocktail Series</div></div>
+    <div class="gallery-item reveal reveal-delay-1"><img src="images/sample_picnic.jpg" alt="School picnic destination creative"><div class="cap">Hotel Srushti — School Picnics</div></div>
+    <div class="gallery-item reveal reveal-delay-2"><img src="images/sample_donation.jpg" alt="Monthly donation campaign creative"><div class="cap">Cardiovision — Monthly Giving</div></div>
+    <div class="gallery-item reveal reveal-delay-3"><img src="images/sample_wedding.jpg" alt="Wedding venue creative"><div class="cap">COCO Resort &amp; Banquets — Weddings</div></div>
+  </div>
+  <div class="video-carousel-row">
+    <div class="vc-card reveal">
+      <h4><i class="fas fa-video"></i> Sample Reels</h4>
+      <div class="vc-links">
+        <a href="https://www.instagram.com/doubletreebyhiltonpune/" target="_blank" rel="noopener"><i class="fas fa-play"></i> Video 1 — DoubleTree by Hilton Pune</a>
+        <a href="https://www.instagram.com/club_charholi/" target="_blank" rel="noopener"><i class="fas fa-play"></i> Video 2 — Club Charholi</a>
+        <a href="https://www.instagram.com/frozenbottlesambhajinagar/" target="_blank" rel="noopener"><i class="fas fa-play"></i> Video 3 — Frozen Bottle</a>
+      </div>
+    </div>
+    <div class="vc-card reveal reveal-delay-1">
+      <h4><i class="fas fa-images"></i> Sample Carousels</h4>
+      <div class="vc-links">
+        <a href="https://www.instagram.com/coco_pune/" target="_blank" rel="noopener"><i class="fas fa-layer-group"></i> Carousel — COCO Pune</a>
+        <a href="https://www.instagram.com/toniquepune/" target="_blank" rel="noopener"><i class="fas fa-layer-group"></i> Carousel — Tonique Pune</a>
+        <a href="https://www.instagram.com/pasco_pnq/" target="_blank" rel="noopener"><i class="fas fa-layer-group"></i> Carousel — Pasco</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="creativity">
+  <div class="creativity reveal">
+    <div class="creativity-head">
+      <div class="eyebrow">Scene 10 — Creativity Corner</div>
+      <h2>Beyond the Feed — Brand Design &amp; Motion</h2>
+      <p>A closer look at the design and video side of the work — agency capability posters, jewellery brand launch creatives, and short-form food reels shot, edited and delivered end-to-end.</p>
+    </div>
+
+    <div class="creativity-sub">Brand &amp; Campaign Posters</div>
+    <div class="poster-grid">
+      <div class="poster-card reveal">
+        <img src="images/creative_iconnetworks.jpg" alt="Icon Networks agency capability poster">
+        <div class="pc-cap">
+          <div class="pc-client">Icon Networks</div>
+          <div class="pc-title">"We Do Everything For You" — Agency Capability Poster</div>
+        </div>
+      </div>
+      <div class="poster-card reveal reveal-delay-1">
+        <img src="images/creative_mbvarma1.jpg" alt="M.B. Varma Jewellers new collection teaser">
+        <div class="pc-cap">
+          <div class="pc-client">M.B. Varma Jewellers</div>
+          <div class="pc-title">"Get Ready For The Arrival" — Collection Teaser</div>
+        </div>
+      </div>
+      <div class="poster-card reveal reveal-delay-2">
+        <img src="images/creative_mbvarma2.jpg" alt="M.B. Varma Jewellers Chhatrapati Sambhajinagar store launch">
+        <div class="pc-cap">
+          <div class="pc-client">M.B. Varma Jewellers</div>
+          <div class="pc-title">New Store Launch — Chhatrapati Sambhajinagar</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="creativity-sub">Short-Form Video Reels</div>
+    <div class="reel-row">
+      <div class="reel-card reveal">
+        <div class="reel-frame">
+          <div class="notch"></div>
+          <video src="videos/reel1.mp4" poster="videos/reel1_poster.jpg" controls muted loop playsinline preload="metadata"></video>
+        </div>
+        <div class="reel-caption">Club Charholi <span>Fries Promo Reel</span></div>
+      </div>
+      <div class="reel-card reveal reveal-delay-1">
+        <div class="reel-frame">
+          <div class="notch"></div>
+          <video src="videos/reel2.mp4" poster="videos/reel2_poster.jpg" controls muted loop playsinline preload="metadata"></video>
+        </div>
+        <div class="reel-caption">Club Charholi <span>Sandwich Promo Reel</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact-section">
+  <div class="contact-grid reveal">
+    <div class="contact-photo"><img src="images/contact.jpg" alt="Tejaswini Pote"></div>
+    <div class="contact-copy">
+      <div class="eyebrow">Scene 11 — Let's Connect</div>
+      <h2>Got a story to tell?</h2>
+      <p class="quote">"Let's make it scroll-stopping."</p>
+      <div class="contact-methods">
+        <a href="mailto:tejaswinipote3@gmail.com"><span class="ic"><i class="fas fa-envelope"></i></span> tejaswinipote3@gmail.com</a>
+        <a href="tel:+918788920835"><span class="ic"><i class="fas fa-phone-alt"></i></span> +91 87889 20835</a>
+        <a href="#"><span class="ic"><i class="fas fa-map-pin"></i></span> Pune, India</a>
+      </div>
+      <div class="contact-links">
+        <a href="#" class="btn-pink" target="_blank">LinkedIn</a>
+        <a href="#" class="btn-outline" target="_blank">Resume Link</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-in">
+    <div class="logo">Tejaswini<span>.</span></div>
+    <div class="social-row">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 Tejaswini Pote — Digital Storyteller. All rights reserved.</div>
+</footer>
+
+<script>
+const menuToggle=document.getElementById('menuToggle');
+const navLinks=document.getElementById('navLinks');
+menuToggle.addEventListener('click',()=>navLinks.classList.toggle('open'));
+navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navLinks.classList.remove('open')));
+
+const revealEls=document.querySelectorAll('.reveal');
+const io=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in-view'); io.unobserve(e.target); } });
+},{threshold:.15});
+revealEls.forEach(el=>io.observe(el));
+
+const counters=document.querySelectorAll('.stat-num');
+const cio=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      const el=e.target; const target=+el.dataset.count; let cur=0;
+      const step=Math.max(1,Math.round(target/40));
+      const tick=()=>{ cur+=step; if(cur>=target){ el.textContent=target+'+'; } else { el.textContent=cur; requestAnimationFrame(tick); } };
+      tick();
+      cio.unobserve(el);
+    }
+  });
+},{threshold:.6});
+counters.forEach(c=>cio.observe(c));
+
+const sections=document.querySelectorAll('body > section');
+const storyBar=document.getElementById('storyBar');
+sections.forEach(()=>{
+  const seg=document.createElement('div'); seg.className='story-seg';
+  const fill=document.createElement('i'); seg.appendChild(fill);
+  storyBar.appendChild(seg);
+});
+const segs=storyBar.querySelectorAll('.story-seg i');
+function updateStoryBar(){
+  sections.forEach((sec,i)=>{
+    const rect=sec.getBoundingClientRect();
+    const progress=Math.min(1,Math.max(0,(0-rect.top)/rect.height))*100;
+    segs[i].style.width=progress+'%';
+  });
+}
+window.addEventListener('scroll',updateStoryBar,{passive:true});
+window.addEventListener('resize',updateStoryBar);
+updateStoryBar();
+
+const clients=[
+  {name:"Double Tree By Hilton Pune", url:"https://www.instagram.com/doubletreebyhiltonpune/"},
+  {name:"Life Of Dorrance", url:"#"},
+  {name:"COCO Pune", url:"https://www.instagram.com/coco_pune/"},
+  {name:"Hotel Srushti & Agro Tourism", url:"https://www.instagram.com/hotelsrushti_agro/"},
+  {name:"Club Charholi", url:"https://www.instagram.com/club_charholi/"},
+  {name:"Tonique Pune", url:"https://www.instagram.com/toniquepune/"},
+  {name:"Pasco", url:"https://www.instagram.com/pasco_pnq/"},
+  {name:"Master Fashion", url:"#"},
+  {name:"Frozen Bottle", url:"https://www.instagram.com/frozenbottlesambhajinagar/"},
+  {name:"Dr. Rahul Patil", url:"https://www.instagram.com/dr_rahul_patil_/"},
+  {name:"Seasons 24 Banquets", url:"https://www.instagram.com/seasons24banquet/"},
+  {name:"Dr. Laxmi S. Waprani", url:"https://www.instagram.com/pune_rheumatologist/"},
+  {name:"Dr. Kaishreen Khan", url:"https://www.instagram.com/dr_kaishreen_khan/"},
+  {name:"Lodresto Key Club", url:"https://www.instagram.com/lodrestokeyclub/"},
+  {name:"Nasir Hussain", url:"https://www.instagram.com/nasirhussain6685/"},
+  {name:"Icon Networks", url:"#"},
+  {name:"M.B. Varma Jewellers", url:"#"},
+  {name:"Soho by Panchshil", url:"#"},
+  {name:"Cardiovision", url:"#"}
+];
+const track=document.getElementById('marqueeTrack');
+const buildPills=()=>clients.map(c=>c.url && c.url!=="#"
+  ? `<a class="client-pill" href="${c.url}" target="_blank" rel="noopener"><i class="fas fa-star"></i>${c.name}</a>`
+  : `<div class="client-pill"><i class="fas fa-star"></i>${c.name}</div>`
+).join('');
+track.innerHTML = buildPills() + buildPills();
+</script>
+</body>
+</html>
